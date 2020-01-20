@@ -1,0 +1,64 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+html{
+    margin: 0em;
+    background-color: #fafafa;
+}
+header{
+    position: fixed;
+}
+.logo{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    color: black;
+    font-weight: medium;
+    font-size: 4em;
+    align-items: left;
+}
+.header-container{
+    display: flex;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.main-container{
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 10000000px;
+    padding-bottom: 5px;
+}
+.header-nav{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: medium;
+    padding-left: 50px;
+}
+.header-link{
+    display: inline-block;
+    font-size: 1.5em;
+    padding-left: 40px;
+}
+a.hover-link{
+    position: relative;
+}
+a.hover-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+a.hover-link:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
