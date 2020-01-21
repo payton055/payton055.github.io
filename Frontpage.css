@@ -2,12 +2,28 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
+*{
+    margin: 0;
+}
 html{
     margin: 0em;
     background-color: #fafafa;
 }
 header{
+    z-index: 1;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    box-sizing: border-box  ;
+    width: 1300px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
     position: fixed;
+    background-color: #fafafa;
 }
 .logo{
     font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -17,33 +33,37 @@ header{
     align-items: left;
 }
 .header-container{
+    align-self: center;
     display: flex;
-    padding-left: 200px;
-    padding-right: 200px;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
+    justify-content: space-between;
 }
 .main-container{
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 10000000px;
-    padding-bottom: 5px;
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .header-nav{
     font-family: 'Noto Sans TC', sans-serif;
-    font-weight: medium;
     padding-left: 50px;
+    align-self: baseline;
 }
-.header-link{
+.header-link-1{
     display: inline-block;
     font-size: 1.5em;
     padding-left: 40px;
 }
-a.hover-link{
+a.hover-link-1{
     position: relative;
 }
-a.hover-link::before {
+a.hover-link-1::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -57,8 +77,69 @@ a.hover-link::before {
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
-a.hover-link:hover::before {
+a.hover-link-1:hover::before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+}
+a.hover-link-2{
+    overflow: hidden;
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: Bold;
+    text-decoration: none;
+    color:#1267fb;
+    border: 1px solid #1267fb;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    border-radius: 10em;
+    transition: all .35s;
+  }
+  
+a.hover-link-2 span{
+    position: relative;
+    z-index: 2;
+  }
+
+a.hover-link-2:after{
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    width: 0;
+    height: 150%;
+    background: #1267fb;
+    transition: all .35s;
+  }
+  
+a.hover-link-2:hover{
+    color: #fff;
+  }
+  
+a.hover-link-2:hover:after{
+    width: 150%;
+  }
+.header-link-2{
+    display: inline-block;
+}
+.main-item{
+    background-color: burlywood;
+    height: 700px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.footer{
+    display: flex;
+    position: relative;
+    margin-top: -100px;
+    height: 100px;
+}
+.Anchor{
+    visibility: hidden;
+    height: 100px;
 }
