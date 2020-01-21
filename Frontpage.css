@@ -130,6 +130,9 @@ a.hover-link-2:hover:after{
 .main-item{
     background-color: burlywood;
     height: 700px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
     margin-left: 300px;
     margin-right: 300px;
 }
